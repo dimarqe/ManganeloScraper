@@ -10,4 +10,8 @@ router.get('/', (req, res, next)=>{
     });
 });
 
+router.get('/manga_info', ()=>{
+    
+});
+
 module.exports = router;
