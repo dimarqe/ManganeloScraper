@@ -2,6 +2,8 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
+
+//generates list of of genre titles...description needs to be added seperately
 function getGenres() {
     let url = 'https://mangakakalot.com/read-cd3cm158504903532';
 
@@ -23,7 +25,9 @@ function getGenres() {
     });
 }
 
+//generates list of manga seperated into two different files based on source
 function getMangaList() {
+    //sets number of search pages to scrape
     let numPages = 5;
 
     for (i = 1; i <= numPages; i++) {
@@ -46,8 +50,5 @@ function getMangaList() {
     }
 }
 
-
-
-
-
-
+getGenres();
+getMangaList();
