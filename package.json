@@ -2,9 +2,9 @@
   "name": "manganeloscraper",
   "version": "1.0.0",
   "description": "Scraper to populate Manga Dragon database",
-  "main": "index.js",
+  "main": "generateData.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "node generateData.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

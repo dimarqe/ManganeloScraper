@@ -14,7 +14,7 @@ function getGenres() {
             if (i >= 7) {
                 let genre = $(element).attr('title');
 
-                fs.appendFile('genreList.json', '{\n\t"genre":"' + genre + '",\n\t"description":"Undefined"\n},\n',
+                fs.appendFile('./data/genreList.json', '{\n\t"genre":"' + genre + '",\n\t"description":"Undefined"\n},\n',
                     (err) => {
                         if (err) {
                             console.log('Failed for : ', genre);
@@ -38,7 +38,7 @@ function getMangaList() {
 
             $('div.list-truyen-item-wrap').each((i, element) => {
                 let link = $(element).find('a').attr('href');
-                let file = (link.startsWith('https://manganelo')) ? 'manganelo.json' : 'mangakakalot.json';
+                let file = (link.startsWith('https://manganelo')) ? './data/manganelo.json' : './data/mangakakalot.json';
 
                 fs.appendFile(file, '\t{"url":"' + link + '"},\n', (error) => {
                     if (error)
